@@ -200,6 +200,11 @@ section .air.air4{
   color: orangered;
 }
 
+.iconnav{
+  font-size: 4ex;
+  color: orangered;
+}
+
 h2 {
   color: orangered;
   font-weight: bold;
@@ -221,6 +226,36 @@ h2::before {
   border-right: 2px solid orangered;
   -webkit-text-stroke: 0vw #f7f7fe;
   animation: animate 6s linear infinite;
+}
+
+@media (max-width: 767px) {
+  h2 {
+    color: orangered;
+    font-weight: bold;
+    font-size: 10ex;
+    position: relative;
+    text-transform: lowercase;
+    -webkit-text-stroke: 0.1px #f7f7fe;
+  }
+
+  h2::before {
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: orangered;
+    overflow: hidden;
+    position: absolute;
+    content: attr(data-text);
+    border-right: 2px solid orangered;
+    -webkit-text-stroke: 0vw #f7f7fe;
+    animation: animate 6s linear infinite;
+  }
+  .text-intro {
+    font-size: 2.5ex;
+    opacity: 1;
+  }
+
 }
 
 @keyframes animate {
@@ -360,8 +395,9 @@ body::-webkit-scrollbar-track {
       font-size: 22px;
   }
 }
-
-
+.navbar-toggler {
+  border-color: orangered;
+}
   </style>
 </head>
 
@@ -403,9 +439,11 @@ body::-webkit-scrollbar-track {
       <a class="navbar-brand" href="#">
         <img src="https://cdn.discordapp.com/attachments/1116925841801224212/1202161034169942026/logo.png?ex=65cc72b5&is=65b9fdb5&hm=21043df06a4bfde92b361b3480013e7c0bfa9bb73c882c6abfbe21b0bfcdb3cd&" width="50" height="50" alt="">
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <span class="material-symbols-outlined iconnav" width="50" height="50">
+          menu
+          </span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarNav">
