@@ -399,6 +399,9 @@ body::-webkit-scrollbar-track {
 .navbar-toggler {
   border-color: orangered;
 }
+.fade {
+  opacity: 0;
+}
   </style>
 </head>
 
@@ -473,7 +476,7 @@ body::-webkit-scrollbar-track {
   </div>
 
 
-  <div class="header-section-title">
+  <div class="header-section-title fade">
     <h1>
       Application
     </h1>
@@ -485,7 +488,7 @@ body::-webkit-scrollbar-track {
   <!-- Main Content Area -->
   <div class="container my-5 d-grid gap-5">
     <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 fade">
         <div class="card shadow">
           <img src="https://cdn.discordapp.com/attachments/1116925841801224212/1202099015563350026/bahh.png?ex=65cc38f3&is=65b9c3f3&hm=145684adb05c37e4f39988b1e2a0262e73cbda88a333f78d1c3de331d2835165&" class="card-img-top"
             alt="...">
@@ -514,7 +517,7 @@ body::-webkit-scrollbar-track {
         </div>
       </div>
 
-      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 fade">
         <div class="card shadow">
           <img src="https://cdn.discordapp.com/attachments/1116925841801224212/1202099015563350026/bahh.png?ex=65cc38f3&is=65b9c3f3&hm=145684adb05c37e4f39988b1e2a0262e73cbda88a333f78d1c3de331d2835165&" class="card-img-top"
             alt="...">
@@ -542,7 +545,7 @@ body::-webkit-scrollbar-track {
         </div>
       </div>
 
-      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 fade">
         <div class="card shadow">
           <img src="https://cdn.discordapp.com/attachments/1116925841801224212/1202099015563350026/bahh.png?ex=65cc38f3&is=65b9c3f3&hm=145684adb05c37e4f39988b1e2a0262e73cbda88a333f78d1c3de331d2835165&" class="card-img-top"
             alt="...">
@@ -647,7 +650,7 @@ body::-webkit-scrollbar-track {
   </div>  -->
 
   
-  <div class="container">
+  <div class="container fade">
     <p class="d-flex justify-content-center" style="font-size: 3ex;  font-weight: bold;">ทำไมคุณต้องเลือกเรา ?</p>
 <div class="row">
   <div class="col-xl-3 col-sm-6 col-12"> 
@@ -726,7 +729,7 @@ body::-webkit-scrollbar-track {
     
     <img src="img/new.png" alt="" style="width: 100%; height: 40px; background-size: 100% 100%; top: 0;">
     <section>
-      <div class="container">
+      <div class="container fade">
         <!--Section: วิธีสั่ง-->
 <section id="buywhere">
   <h3 class="text-center mb-4 pb-2 text-white fw-bold" style="margin-top: 5ex; font-size: 6ex">FAQ</h3>
@@ -825,5 +828,32 @@ body::-webkit-scrollbar-track {
     }
   
   </script>
+
+<script>
+/* FadeIn Scroll */
+$(document).ready(function() {
+    
+    /* Every time the window is scrolled ... */
+    $(window).scroll( function(){
+    
+        /* Check the location of each desired element */
+        $('.fade').each( function(i){
+            
+            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            /* If the object is completely visible in the window, fade it it */
+            if( bottom_of_window > bottom_of_object ){
+                
+                $(this).animate({'opacity':'1'},900);
+                    
+            }
+            
+        }); 
+    
+    });
+    
+});
+</script>
 
 </html>
