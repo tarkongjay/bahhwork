@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>bahhwork - กลุ่มคนรุ่นใหม่ ที่สนุกในการทำ Software</title>
+  <title>bahhwork Gang - Home</title>
   <link rel="icon" href="img/logo.png" type="image/x-icon" />
   <link rel="stylesheet" href="css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit">
@@ -15,7 +15,9 @@
     <!-- Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
 
   </script>
   
@@ -402,18 +404,192 @@ body::-webkit-scrollbar-track {
 .fade {
   opacity: 0;
 }
-.wavies > use{
-  animation: waveAround 12s linear infinite;
-  &:nth-child(1) { animation-delay:-2s; }
-  &:nth-child(2) { animation-delay:-2s; animation-duration:5s }
-  &:nth-child(3) { animation-delay:-4s; animation-duration:3s }
-}
 
-@keyframes waveAround{
-  0% { transform: translate(-90px , 0%) }
-  100% { transform: translate(85px , 0%) }
-}
+.section-testmonials {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
 
+    .column-testmonials {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 20%;
+    }
+
+    .section-details {
+        border-left: 10px solid orangered;
+        padding-left: 20px;
+    }
+
+
+    .name-section {
+        font-weight: 800;
+        text-transform: uppercase;
+        font-size: 14px;
+        color: orangered !important;
+        line-height: 1.2em;
+        margin: 0;
+    }
+
+    .title-section b {
+        color: orangered;
+    }
+
+    .title-section {
+        color: #000;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin: 0;
+    }
+
+    .navigation-testmonials {
+        display: flex;
+        gap: 10px;
+    }
+
+
+    .swiper-testmonials {
+        width: 80%;
+        overflow: hidden;
+        position: relative;
+    }
+
+    @media (max-width: 768px) {
+        .section-testmonials {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .swiper-testmonials {
+            width: 100%;
+        }
+    }
+
+    .swiper-testmonials .swiper-slide {
+        border-radius: 10px;
+        background: linear-gradient(118deg, orangered 10.88%, rgb(255, 114, 62) 83.88%);
+        display: flex;
+        padding: 30px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        transform: scale(0.9) !important;
+        filter: blur(1px) grayscale(0.5);
+        transition: 0.2s;
+    }
+
+    .swiper-testmonials .swiper-slide * {
+        margin: 0;
+    }
+
+    .swiper-testmonials .swiper-slide-active {
+        filter: blur(0px) !important;
+        transform: scale(1) !important;
+    }
+
+    .card-slide {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .head-slide {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header-slide {
+        display: flex;
+        align-items: center;
+        gap: 20px
+    }
+
+    .title-slide h4 {
+        color: #FFF;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .title-slide h6 {
+        color: rgb(255, 255, 255);
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .text-slide {
+        color: #FFF;
+        font-size: 14px;
+        font-style: italic;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .swiper-button-testmonials-next,
+    .swiper-button-testmonials-prev {
+        cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+        .header-slide svg {
+            width: 50px;
+        }
+
+        .title-slide h4 {
+            font-size: 14px;
+        }
+
+        .swiper-testmonials .swiper-slide {
+            padding: 20px;
+        }
+    }
+    
+    .card1{
+	display: grid;
+	grid-template-columns: 300px;
+	grid-template-rows: 300px;
+	overflow: hidden;
+	width: 300px;
+	height: 300px;
+  border-radius: 15px;
+}
+.card1 img{
+	width: 100%;
+	grid-area: 1 / 1 / span 1 / span 1;
+	transition: 0.3s ease-out;
+  filter: brightness(40%);
+  
+}
+.card1 p{
+	z-index: 111;
+	color: #fff;
+	grid-area: 1 / 1 / span 1 / span 1;
+}
+.card1 .text1{
+	z-index: 111;
+	color: #fff;
+	grid-area: 1 / 1 / span 1 / span 1;
+}
+.text1{
+	height: 100%;
+	width: 100%;
+	display: flex;
+	place-items: center;
+	justify-content: center;
+	font-size: 1em;
+	text-align: center;
+	transition: 0.3s ease-out;
+}
+.card1:hover img{
+	transform: scale(1.2, 1.2);
+}
+.card1:hover .text{
+	background-color: rgba(0,0,0,.5);
+}
   </style>
 </head>
 
@@ -482,8 +658,8 @@ body::-webkit-scrollbar-track {
       <!-- <p class="text-white text-title">bahhwork.</p> -->
       <h2>bahhwork.</h2>
       <!-- <p class="text-white text-title">ราคาถูก ปลอดภัย เล่นได้แน่นอน</p> -->
-      <p class="text-white text-intro">เป็นเจ้าของ Application หรือ Website ของคุณง่ายๆ</p>
-      <p class="text-white text-intro">กับ กลุ่มคนรุ่นใหม่ ที่สนุกในการทำ Software</p>
+      <p class="text-white text-intro">Easily own your Application or Website</p>
+      <p class="text-white text-intro">with the new generation gang It's fun to make software.</p>
     </div>
   </div>
 
@@ -661,80 +837,195 @@ body::-webkit-scrollbar-track {
     </div>
   </div>  -->
 
+  <div class="container fade" style="padding-top: 50px;">
+    <div class="section-testmonials">
+      <div class="column-testmonials">
+          <div class="section-details">
+              <h1 class="name-section">รวม 17 คน</h4>
+              <h1 class="title-section">สมาชิกใน <b>bahhwork</b></h2>
+          </div>
   
-  <div class="container fade">
-    <p class="d-flex justify-content-center" style="font-size: 3ex;  font-weight: bold;">ทำไมคุณต้องเลือกเรา ?</p>
+          <!-- If we need navigation buttons -->
+          <div class="navigation-testmonials">
+              <div class="swiper-button-testmonials-prev"><svg xmlns="http://www.w3.org/2000/svg" width="64" height="65"
+                      viewBox="0 0 64 65" fill="none">
+                      <circle cx="32" cy="32" r="31" transform="matrix(-1 0 0 1 64 0.947266)" stroke="orangered"
+                          stroke-width="2" />
+                      <path
+                          d="M34.5967 20.9197C35.1642 20.3521 36.0843 20.3521 36.6519 20.9197C37.2194 21.4872 37.2194 22.4073 36.6519 22.9749L34.5967 20.9197ZM36.6519 22.9749L24.3207 35.306L22.2655 33.2509L34.5967 20.9197L36.6519 22.9749Z"
+                          fill="orangered" />
+                      <path
+                          d="M34.9724 45.9749C35.5399 46.5424 36.4601 46.5424 37.0276 45.9749C37.5951 45.4073 37.5951 44.4872 37.0276 43.9197L34.9724 45.9749ZM37.0276 43.9197L24.6964 31.5885L22.6412 33.6437L34.9724 45.9749L37.0276 43.9197Z"
+                          fill="orangered" />
+                  </svg></div>
+              <div class="swiper-button-testmonials-next"><svg xmlns="http://www.w3.org/2000/svg" width="64" height="65"
+                      viewBox="0 0 64 65" fill="none">
+                      <circle cx="32" cy="32.9473" r="32" fill="orangered" />
+                      <path
+                          d="M29.4033 20.9197C28.8358 20.3521 27.9157 20.3521 27.3481 20.9197C26.7806 21.4872 26.7806 22.4073 27.3481 22.9749L29.4033 20.9197ZM27.3481 22.9749L39.6793 35.306L41.7345 33.2509L29.4033 20.9197L27.3481 22.9749Z"
+                          fill="white" />
+                      <path
+                          d="M29.0276 45.9749C28.4601 46.5424 27.5399 46.5424 26.9724 45.9749C26.4049 45.4073 26.4049 44.4872 26.9724 43.9197L29.0276 45.9749ZM26.9724 43.9197L39.3036 31.5885L41.3588 33.6437L29.0276 45.9749L26.9724 43.9197Z"
+                          fill="white" />
+                  </svg></div>
+          </div>
+      </div>
+  
+      <!-- Slider main container -->
+      <div class="swiper-testmonials">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+              <!-- Slide -->
+              <div class="swiper-slide">
+                  <div class="card-slide">
+                      <div class="head-slide">
+                          <div class="header-slide" style="padding: 20px;">
+                                  <img src="img/logoteam.jpg" width="40" height="40" alt="">
+                              <div class="title-slide">
+                                  <h4>แก๊งค์ เต่าคะนองนา</h4>
+                                  <h6>มีสมาชิกทั้งหมด 5 คน</h6>
+                              </div>
+                          </div>
+  
+                          <!-- <svg width="47" height="48" viewBox="0 0 47 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <rect y="0.590088" width="47" height="47" rx="10" fill="white" />
+                          </svg> -->
+                      </div>
+                      <p class="text-slide">
+                        งานไว แก๊งค์แบกของ bahhwork
+                      </p>
+                  </div>
+              </div>
+              <!-- Slide -->
+              <div class="swiper-slide">
+                  <div class="card-slide">
+                      <div class="head-slide">
+                        <div class="header-slide" style="padding: 20px;">
+                          <img src="img/logoteam.jpg" width="40" height="40" alt="">
+                              </svg>
+                              <div class="title-slide">
+                                  <h4>แก๊งค์ สุดสวย</h4>
+                                  <h6>มีสมาชิกทั้งหมด 5 คน</h6>
+                              </div>
+                          </div>
+  
+                          <!-- <svg width="47" height="48" viewBox="0 0 47 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <rect y="0.590088" width="47" height="47" rx="10" fill="white" />
+                          </svg> -->
+                      </div>
+                      <p class="text-slide">
+                        แก๊งค์หญิงล้วน แก๊งค์ตัวตึง bahhwork
+                      </p>
+                  </div>
+              </div>
+              <!-- Slide -->
+              <div class="swiper-slide">
+                  <div class="card-slide">
+                      <div class="head-slide">
+                        <div class="header-slide" style="padding: 20px;">
+                          <img src="img/logoteam.jpg" width="40" height="40" alt="">
+                              <div class="title-slide">
+                                  <h4>แก๊งค์ หมอยอด</h4>
+                                  <h6>มีสมาชิกทั้งหมด 3 คน</h6>
+                              </div>
+                          </div>
+  
+                          <!-- <svg width="47" height="48" viewBox="0 0 47 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <rect y="0.590088" width="47" height="47" rx="10" fill="white" />
+                          </svg> -->
+                      </div>
+                      <p class="text-slide">
+                          Dev ยันเช้า เพราะดองงาน แต่ส่งงานทันเวลา 
+                      </p>
+                  </div>
+              </div>
+              <!-- Slide -->
+              <div class="swiper-slide">
+                  <div class="card-slide">
+                      <div class="head-slide">
+                        <div class="header-slide" style="padding: 20px;">
+                          <img src="img/logoteam.jpg" width="40" height="40" alt="">
+                              <div class="title-slide">
+                                  <h4>แก๊งค์ เพื่อนไม่คบ</h4>
+                                  <h6>มีสมาชิกทั้งหมด 2 คน</h6>
+                              </div>
+                          </div>
+<!--   
+                          <svg width="47" height="48" viewBox="0 0 47 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <rect y="0.590088" width="47" height="47" rx="10" fill="white" />
+                          </svg> -->
+                      </div>
+                      <p class="text-slide">
+                        แก๊งค์รวม introvert
+                      </p>
+                  </div>
+              </div>
+              <!-- Slide -->
+              <div class="swiper-slide">
+                  <div class="card-slide">
+                      <div class="head-slide">
+                        <div class="header-slide" style="padding: 20px;">
+                          <img src="img/logoteam.jpg" width="40" height="40" alt="">
+                              <div class="title-slide">
+                                  <h4>แก๊งค์ นี้ไม่มีก็ได้นะ</h4>
+                                  <h6>มีสมาชิกทั้งหมด 2 คน</h6>
+                              </div>
+                          </div>
+  
+                          <!-- <svg width="47" height="48" viewBox="0 0 47 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <rect y="0.590088" width="47" height="47" rx="10" fill="white" />
+                          </svg> -->
+                      </div>
+                      <p class="text-slide">
+                        One night miracle for work
+                      </p>
+                  </div>
+              </div>
+  
+  
+          </div>
+      </div>
+  </div>
+  </div>
+  <div class="container fade" style="padding-top: 100px; padding-bottom: 100px;">
+    <p class="d-flex justify-content-center" style="font-size: 4ex;  font-weight: bold;">ลูกค้าของเรา</p>
 <div class="row">
   <div class="col-xl-3 col-sm-6 col-12"> 
-    <div class="card">
-      <div class="card-content">
-        <div class="card-body" style="text-align: center;">
-            <div class="align-self-center">
-              <span class="material-symbols-outlined iconsize">
-                shopping_bag
-                </span>
-            </div>
-            <div class="media-body text-right">
-              <h3>ผู้ใช้บริการ</h3>
-              <span>สามารถออกแบบได้ตามต้องการ</span>
-            </div>
-          </div>   
+    <div class="card1">
+      <img src="img/ecom.jpg">
+      <div class="text1">
+        <h1>E-Commerce</h1>
+      </div>
     </div>
-  </div>
     </div>
 
     <div class="col-xl-3 col-sm-6 col-12"> 
-      <div class="card">
-        <div class="card-content">
-          <div class="card-body" style="text-align: center;">
-              <div class="align-self-center">
-                <span class="material-symbols-outlined iconsize">
-                  check_circle
-                  </span>
-              </div>
-              <div class="media-body text-right">
-                <h3>รับประกัน</h3>
-                <span>ประกันงานทุกชิ้น 365 วัน</span>
-              </div>
-            </div>   
-      </div>
-    </div>
-      </div>
-
-    <div class="col-xl-3 col-sm-6 col-12"> 
-      <div class="card">
-        <div class="card-content">
-          <div class="card-body" style="text-align: center;">
-              <div class="align-self-center">
-                <span class="material-symbols-outlined iconsize">
-                  chat
-                  </span>
-              </div>
-              <div class="media-body text-right">
-                <h3>บริการหลังการขาย</h3>
-                <span>สอบถามได้ทุกวัน 10.00-19.00 น.</span>
-              </div>
-            </div>   
-      </div>
-    </div>
-      </div>
-
-      <div class="col-xl-3 col-sm-6 col-12"> 
-        <div class="card">
-          <div class="card-content">
-            <div class="card-body" style="text-align: center;">
-                <div class="align-self-center">
-                  <span class="material-symbols-outlined iconsize">
-                    payments
-                    </span>
-                </div>
-                <div class="media-body text-right">
-                  <h3>ราคาสินค้า</h3>
-                  <span>ราคาสมเหตุสมผล กับคุณภาพงาน</span>
-                </div>
-              </div>   
+      <div class="card1">
+        <img src="img/book.jpg">
+        <div class="text1">
+          <h1>Educational</h1>
         </div>
       </div>
+      </div>
+
+
+      <div class="col-xl-3 col-sm-6 col-12"> 
+        <div class="card1">
+          <img src="img/org.jpg">
+          <div class="text1">
+            <h1>Organization</h1>
+          </div>
+        </div>
+        </div>
+
+
+      <div class="col-xl-3 col-sm-6 col-12"> 
+        <div class="card1">
+          <img src="img/end.jpg">
+          <div class="text1">
+            <h1>Entertainment</h1>
+          </div>
+        </div>
         </div>
 </div>
     </div>
@@ -867,6 +1158,34 @@ $(document).ready(function() {
     });
     
 });
+</script>
+<script>
+    const swiperTestmonials = new Swiper('.swiper-testmonials', {
+        loop: true,
+        slidesPerView: 1.2,
+        grabCursor: true,
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-testmonials-next',
+            prevEl: '.swiper-button-testmonials-prev',
+        },
+        breakpoints: {
+            // when window width is >= 640px
+            500: {
+                slidesPerView: 1.4,
+            },
+            780: {
+                slidesPerView: 1.8,
+            },
+            1300: {
+                slidesPerView: 2.6,
+            },
+            1630: {
+                slidesPerView: 3.2,
+            }
+        }
+
+    });
 </script>
 
 </html>
